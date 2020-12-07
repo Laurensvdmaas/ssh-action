@@ -1,0 +1,22 @@
+name: 'SSH action'
+description: 'SSH into server and execute command.'
+inputs:
+  HOST:
+    description: 'Host to connect to'
+    required: true
+  USER:
+    description: 'User to use'
+    required: true
+  KEY:
+    description: 'Key to use'
+    required: true
+  PORT:
+    description: 'Port to use'
+    required: true
+    default: '22'
+outputs:
+  output:
+    description: 'Stdout of the command'
+runs:
+  using: 'node12'
+  main: 'index.js'
